@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "146616149514",
+    "project_id": "top-docteur",
+    "storage_bucket": "top-docteur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146616149514:android:8876f1d9d8219e326421f3",
+        "android_client_info": {
+          "package_name": "com.example.top_docteur"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF8wvJEC_1xeVwDiwGeW0cHUQv7nYNO6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
