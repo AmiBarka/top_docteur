@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:top_docteur/screens/pages_home/rating.dart';
+import 'package:top_docteur/screens/pages_home/commentaire.dart';
 import 'package:top_docteur/screens/pages_home/home_screen.dart';
 import 'package:top_docteur/screens/Auth/profile_user.dart';
 
@@ -14,7 +14,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     HomeScreen(),
-    Favorite(),
+    CommentairesPage(),
     ProfilePage(),
   ];
 
@@ -44,7 +44,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.star_border_purple500), label: "Rating"),
+                icon: Icon(Icons.messenger_sharp), label: "Commentaire"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_add), label: "Profile"),
           ],

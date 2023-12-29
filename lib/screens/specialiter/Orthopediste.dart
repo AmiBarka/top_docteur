@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:top_docteur/controllers/docteur_controller.dart';
+//import 'package:top_docteur/widgets/docteur_widget.dart';
 import 'package:top_docteur/widgets/widget_top_specialite.dart';
 
 class DocteurPage extends StatelessWidget {
@@ -11,10 +12,8 @@ class DocteurPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize:
-              Size.fromHeight(90.0), // Ajustez la hauteur selon vos préférences
+          preferredSize: Size.fromHeight(90.0),
           child: Container(
-            //color: Colors.green,
             alignment: Alignment.center,
             child: const Text(
               'Liste Orthopédiste',
@@ -22,7 +21,6 @@ class DocteurPage extends StatelessWidget {
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.green,
-                // Changer la couleur du texte selon vos préférences
               ),
             ),
           ),
@@ -35,7 +33,7 @@ class DocteurPage extends StatelessWidget {
             } else if (snapshot.hasError) {
               return Center(child: Text('Erreur de chargement des données'));
             } else {
-              return DocteurWidget(); // Utilisation du widget séparé
+              return DocteurWidget();
             }
           },
         ),

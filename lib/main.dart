@@ -1,15 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-//import 'package:top_docteur/screens/pages_home/home_screen.dart';
 import 'package:top_docteur/screens/pages_home/welcome_screen.dart';
 import 'firebase_options.dart';
+//import 'screens/pages_home/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp(const MyApp());
 }
 

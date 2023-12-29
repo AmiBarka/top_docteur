@@ -23,6 +23,7 @@ class CommentaireModel {
       commentaire: data['commentaire'] ?? '',
       users: UserModel.fromFirestore(
           data['users']), // Assurez-vous que cela est correct
+      //users: UserModel(email: '', nom: '', tel: '', uid: '')
     );
   }
 }
