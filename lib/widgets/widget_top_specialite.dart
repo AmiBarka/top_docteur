@@ -46,7 +46,7 @@ class DocteurWidget extends StatelessWidget {
                       Get.to(() => DetailsPage(docteur: docteur));
                     },
                     child: Card(
-                      margin: EdgeInsets.all(30.0),
+                      margin: EdgeInsets.all(15.0),
                       elevation: 8.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
