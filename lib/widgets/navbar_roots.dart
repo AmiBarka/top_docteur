@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:top_docteur/screens/pages_home/commentaire.dart';
 import 'package:top_docteur/screens/pages_home/home_screen.dart';
 import 'package:top_docteur/screens/Auth/profile_user.dart';
 
@@ -14,7 +13,6 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     HomeScreen(),
-    CommentairesPage(),
     ProfilePage(),
   ];
 
@@ -43,8 +41,6 @@ class _NavBarRootsState extends State<NavBarRoots> {
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Home"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.messenger_sharp), label: "Commentaire"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_add), label: "Profile"),
           ],

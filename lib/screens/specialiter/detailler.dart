@@ -1,117 +1,7 @@
-// import 'package:flutter/material.dart';
-// import 'package:top_docteur/controllers/docteur_controller.dart';
-// import 'package:top_docteur/modeles/commentaire._model.dart';
-// import 'package:top_docteur/modeles/docteur_modele.dart';
-// import 'package:top_docteur/services/docteur_comme_service.dart';
-// import 'package:top_docteur/services/docteur_service.dart';
-// //import 'details_controller.dart';
-
-// class DetailsPage extends StatefulWidget {
-//   final DocteurModel docteur;
-
-//   DetailsPage({Key? key, required this.docteur}) : super(key: key);
-
-//   @override
-//   _DetailsPageState createState() => _DetailsPageState();
-// }
-
-// class _DetailsPageState extends State<DetailsPage> {
-//   late DetailsController _controller;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _controller = DetailsController(
-//       docteur: widget.docteur,
-//       specialiteService: SpecialiteService(),
-//       commentaireService: CommentaireService(),
-//     );
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: FutureBuilder<List<CommentaireModel>>(
-//           future: _controller.getCommentaires(),
-//           builder: (context, snapshot) {
-//             if (snapshot.connectionState == ConnectionState.waiting) {
-//               return CircularProgressIndicator();
-//             } else if (snapshot.hasError) {
-//               return Text('Erreur: ${snapshot.error}');
-//             } else {
-//               return _buildDetailsPage(snapshot.data ?? []);
-//             }
-//           },
-//         ),
-//       ),
-//     );
-//   }
-
-//   Widget _buildDetailsPage(List<CommentaireModel> commentaires) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Détails du Docteur'),
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(16.0),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Center(
-//               child: SizedBox(
-//                 width: 150.0,
-//                 height: 150.0,
-//                 child: ClipRRect(
-//                   borderRadius: BorderRadius.circular(8.0),
-//                   child: Image.network(
-//                     widget.docteur.image,
-//                     fit: BoxFit.cover,
-//                   ),
-//                 ),
-//               ),
-//             ),
-//             SizedBox(height: 16.0),
-//             Text('Nom: ${widget.docteur.nom}',
-//                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
-//             Text('Email: ${widget.docteur.email}'),
-//             Text('Téléphone: ${widget.docteur.tel}'),
-//             Text('Lien: ${widget.docteur.lien.join(', ')}'),
-//             Text('Spécialité: ${widget.docteur.specialite.nom}'),
-//             SizedBox(height: 16.0),
-//             Text('Commentaires:',
-//                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
-//             SizedBox(height: 8.0),
-//             Expanded(
-//               child: ListView.builder(
-//                 itemCount: commentaires.length,
-//                 itemBuilder: (context, index) {
-//                   var commentaire = commentaires[index];
-//                   return ListTile(
-//                     title: Text(commentaire.commentaire),
-//                     subtitle: Column(
-//                       crossAxisAlignment: CrossAxisAlignment.start,
-//                       children: [
-//                         Text('Rating: ${commentaire.rating}'),
-//                         Text('Nom de l\'utilisateur: ${commentaire.users.nom}'),
-//                       ],
-//                     ),
-//                   );
-//                 },
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:top_docteur/controllers/docteur_controller.dart';
 import 'package:top_docteur/modeles/commentaire._model.dart';
 import 'package:top_docteur/modeles/docteur_modele.dart';
-import 'package:top_docteur/services/ajoute%20commantaire.dart';
 import 'package:top_docteur/services/ajoute%20commantaire.dart';
 import 'package:top_docteur/services/docteur_comme_service.dart';
 import 'package:top_docteur/services/docteur_service.dart';
@@ -224,7 +114,6 @@ class _DetailsPageState extends State<DetailsPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Rating: ${commentaire.rating}'),
-                Text('Nom de l\'utilisateur: ${commentaire.users.nom}'),
               ],
             ),
           ),

@@ -18,12 +18,11 @@ class CommentaireModel {
   static CommentaireModel fromFirestore(DocumentSnapshot doc) {
     final data = doc.data() as Map<String, dynamic>;
     return CommentaireModel(
-      id: doc.id,
-      rating: data['rating'] ?? 0.0,
-      commentaire: data['commentaire'] ?? '',
-      users: UserModel.fromFirestore(
-          data['users']), // Assurez-vous que cela est correct
-      //users: UserModel(email: '', nom: '', tel: '', uid: '')
-    );
+        id: doc.id,
+        rating: data['rating'] ?? 0.0,
+        commentaire: data['commentaire'] ?? '',
+        // users: UserModel.fromFirestore(
+        //     data['users']), // Assurez-vous que cela est correct
+        users: UserModel(email: '', nom: '', tel: '', uid: ''));
   }
 }
